@@ -5,6 +5,18 @@ This standalone simulation explores the peer-synchronization part of
 It is not integrated with uAgents and does not change PR #942. No network,
 blockchain transactions, dependencies, or real agents are required.
 
+## Draft status and review material
+
+This is a design-review draft, not a merge-ready production fix. Maintainers
+have not approved the wire protocol and compatibility choices, and the model
+has not been integrated into real uAgents or exercised over their transports.
+Issue #413 must remain open for the peer-synchronization work.
+
+- [Test inventory and validation results](TESTING.md): every executed simulation
+  test, reproduction commands, limitations, and separate evidence from #942.
+- [Real-peer integration requirements](INTEGRATION.md): implementation decisions,
+  missing tests, and criteria for a production implementation.
+
 ## Relationship to the existing fix
 
 Issue #413 describes two problems: local expiry is not enforced by the dialogue
@@ -29,8 +41,6 @@ From this directory, using Python 3.10 or newer:
 python -m unittest -v
 python lease_simulation.py
 ```
-
-
 
 ## Proposed semantics
 
